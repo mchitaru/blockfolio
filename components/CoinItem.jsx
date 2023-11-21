@@ -11,7 +11,7 @@ const CoinItem = ({item}) => {
           }).format(value);
   };
 
-  const percentColor = item.price_change_percentage_24h < 0 ? "#ea3943" : "#16c784";
+  const priceColor = item.price_change_percentage_24h < 0 ? "#ea3943" : "#16c784";
 
   return ( 
     <View style={styles.coinContainer}>
@@ -31,10 +31,10 @@ const CoinItem = ({item}) => {
           <AntDesign 
             name={item.price_change_percentage_24h < 0 ? "caretdown": "caretup"}
             size={14} 
-            color={percentColor}
+            color={priceColor}
             style={styles.caretIcon}
           />
-          <Text style={{color: percentColor}}>{item.price_change_percentage_24h.toFixed(2)}%</Text>
+          <Text style={{color: priceColor}}>{item.price_change_percentage_24h.toFixed(2)}%</Text>
         </View>
       </View>
       <View style={{marginLeft: 'auto', alignItems: 'flex-end'}}>
