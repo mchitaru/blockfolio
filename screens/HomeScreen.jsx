@@ -15,8 +15,8 @@ const HomeScreen = () => {
     if(loading) return;
     
     setLoading(true);
-    const mdata = await getMarketData(page);
-    setData((prevData) => ([...prevData, ...mdata]));
+    const mdata = await getMarketData(page);    
+    setData((prevData) => (page === 1 ? mdata : prevData.concat(mdata)));
     setLoading(false);
 
     console.log("fetch");
@@ -29,13 +29,14 @@ const HomeScreen = () => {
   if(loading || !data) {
     return <ActivityIndicator size="large" />
   }  
+  
   return ( 
     <FlatList 
       data={data}
       renderItem={({item}) => (<CoinItem item={item}/>)}
-      keyExtractor={item => item.id}
-      onEndReachedThreshold={0.2}
+      keyExtractor={item => item.id}      
       onEndReached={() => setPage(data.length / 10 + 1)}
+      refreshing={loading} 
       refreshControl={
         <RefreshControl
           refreshing={loading} 
