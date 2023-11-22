@@ -13,9 +13,8 @@ const CoinScreen = () => {
   const formatPrice = ({ value }) => {
     "worklet";
 
-    const price = value != "" ? value : data.market_data.current_price.usd;
-
-    return ` $${price.toLocaleString("en-US", {currency: "USD"})}`;
+    const price = Number(value != "" ? value : data.market_data.current_price.usd);
+    return price.toLocaleString("en-US", {currency: "USD", style: "currency", minimumFractionDigits: 2, useGrouping: true});
   };
 
   return ( 
@@ -67,8 +66,7 @@ const styles = StyleSheet.create({
   price: {
     color: "white", 
     fontSize: 30, 
-    fontWeight: "bold", 
-    letterSpacing: 1
+    fontWeight: "bold",
   },
   priceContainer: {
     padding: 15, 
