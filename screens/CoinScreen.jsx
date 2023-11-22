@@ -3,8 +3,11 @@ import CoinHeader from "./components/CoinHeader";
 import data from '../assets/data/crypto.json';
 import { AntDesign } from '@expo/vector-icons';
 import { LineChart, CandlestickChart } from "react-native-wagmi-charts";
+import { useRoute } from "@react-navigation/native";
 
 const CoinScreen = () => {
+
+  const route = useRoute();
 
   const screenWidth = Dimensions.get("window").width;
   const priceColor = data.price_change_percentage_24h < 0 ? "#ea3943" : "#16c784";

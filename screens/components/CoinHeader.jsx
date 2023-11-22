@@ -1,10 +1,19 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
+import { useNavigation } from "@react-navigation/native";
 
 const CoinHeader = ({image, symbol, rank}) => {
+
+  const navigation = useNavigation();
+
   return ( 
     <View style={styles.container}>
-      <Ionicons name="chevron-back-sharp" size={30} color="white" />
+      <Ionicons 
+        name="chevron-back-sharp" 
+        size={30} 
+        color="white"
+        onPress={() => navigation.goBack()}
+      />
       <View style={styles.tickerContainer}>
         <Image 
           source={{uri: image}}

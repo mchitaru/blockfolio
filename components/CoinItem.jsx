@@ -1,6 +1,7 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from "@react-navigation/native";
 
 const CoinItem = ({item}) => {
   
@@ -11,10 +12,15 @@ const CoinItem = ({item}) => {
           }).format(value);
   };
 
+  const navigation = useNavigation();
+
   const priceColor = item.price_change_percentage_24h < 0 ? "#ea3943" : "#16c784";
 
   return ( 
-    <View style={styles.coinContainer}>
+    <Pressable 
+      style={styles.coinContainer}
+      onPress={() => navigation.navigate("Coin", {id: item.id})}
+    >
       <Image 
         source={{uri: item.image}} 
         height={30} 
@@ -41,7 +47,7 @@ const CoinItem = ({item}) => {
         <Text style={styles.title}>{item.current_price}</Text>
         <Text style={{color: 'white'}}>MCap {numberFormat(item.market_cap)}</Text>
       </View>
-    </View>
+    </Pressable>
 );
 }
 
