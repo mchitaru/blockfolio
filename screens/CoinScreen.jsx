@@ -1,17 +1,23 @@
-import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import CoinHeader from "./components/CoinHeader";
-import data from '../assets/data/crypto.json';
+// import json from '../assets/data/crypto.json';
 import { AntDesign } from '@expo/vector-icons';
 import { LineChart, CandlestickChart } from "react-native-wagmi-charts";
 import { useRoute } from "@react-navigation/native";
 
+import { getCoinData, getCoinChart } from "../lib/api";
+import { useEffect, useState } from "react";
+
 const CoinScreen = () => {
 
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState(null);
+  const [chart, setChart] = useState(null);
+
   const route = useRoute();
+  const id = route.params.id;  
 
   const screenWidth = Dimensions.get("window").width;
-  const priceColor = data.price_change_percentage_24h < 0 ? "#ea3943" : "#16c784";
-  const chartColor = data.market_data.current_price.usd > data.prices[0][1] ? "#16c784" : "#ea3943";
 
   const formatPrice = ({ value }) => {
     "worklet";
@@ -20,9 +26,33 @@ const CoinScreen = () => {
     return price.toLocaleString("en-US", {currency: "USD", style: "currency", minimumFractionDigits: 2, useGrouping: true});
   };
 
+  const fetchCoinData = async () => {    
+
+    setLoading(true);
+
+    const data = await getCoinData(id);
+    setData(data);
+
+    const chart = await getCoinChart(id);
+    setChart(chart);
+
+    setLoading(false);
+  }
+
+  useEffect(() => {
+    fetchCoinData();
+  }, []);
+
+  if(loading || !data || !chart) {
+    return <ActivityIndicator size="large" />
+  }
+
+  const priceColor = data.market_data.price_change_percentage_24h < 0 ? "#ea3943" : "#16c784";
+  const chartColor = data.market_data.current_price.usd > chart.prices[0][1] ? "#16c784" : "#ea3943";
+
   return ( 
       <LineChart.Provider
-        data={data.prices.map(([timestamp, value]) => ({ timestamp, value }))}
+        data={chart.prices.map(([timestamp, value]) => ({ timestamp, value }))}
       >
         <View style={{paddingHorizontal: 10}}>
           <CoinHeader 
@@ -42,7 +72,7 @@ const CoinScreen = () => {
             </View>
             <View style={StyleSheet.flatten([styles.priceChangeContainer, {backgroundColor: priceColor}])}>
               <AntDesign 
-                name={data.price_change_percentage_24h < 0 ? "caretdown": "caretup"}
+                name={data.market_data.price_change_percentage_24h < 0 ? "caretdown": "caretup"}
                 size={14} 
                 color="white"
                 style={styles.caretIcon}
