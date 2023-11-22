@@ -1,4 +1,5 @@
 [
+[
   {
     "id": "bitcoin",
     "symbol": "btc",
@@ -283,6 +284,8 @@
     "roi": null,
     "last_updated": "2021-12-02T18:01:37.164Z"
   },
+],
+[
   {
     "id": "avalanche-2",
     "symbol": "AVAX",
@@ -571,6 +574,8 @@
     "roi": null,
     "last_updated": "2021-12-02T18:00:21.605Z"
   },
+],
+[
   {
     "id": "bitcoin-cash",
     "symbol": "bch",
@@ -859,6 +864,8 @@
     "roi": null,
     "last_updated": "2021-12-02T18:03:25.249Z"
   },
+],
+[
   {
     "id": "okb",
     "symbol": "okb",
@@ -1151,6 +1158,8 @@
     "roi": null,
     "last_updated": "2021-12-02T18:00:49.368Z"
   },
+],
+[
   {
     "id": "decentraland",
     "symbol": "mana",
@@ -1447,4 +1456,5 @@
     "roi": null,
     "last_updated": "2021-12-02T18:03:22.837Z"
   }
+]
 ]
