@@ -1,10 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
-import HomeScreen from './screens/HomeScreen';
-import CoinScreen from './screens/CoinScreen';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { NavigationContainer, DarkTheme } from '@react-navigation/native';
-import Navigation from './Navigation';
+
+import StackNavigator from './components/StackNavigator';
 
 const MyTheme = {
   ...DarkTheme,
@@ -19,7 +18,7 @@ export default function App() {
     <NavigationContainer theme={MyTheme}>
       <GestureHandlerRootView style={{ flex: 1 }}>
           <View style={styles.container}>
-            <Navigation />
+            <StackNavigator />
             <StatusBar style='light' />
           </View>
       </GestureHandlerRootView>
