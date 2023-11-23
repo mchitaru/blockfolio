@@ -32,6 +32,10 @@ const MarketsScreen = () => {
       );
   };
   
+  if(data.length === 0) {
+    return <ActivityIndicator size="large" />
+  }
+
   return ( 
     <FlatList 
       data={data}

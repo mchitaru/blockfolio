@@ -10,11 +10,11 @@ import { useEffect, useState } from "react";
 const CoinScreen = () => {
 
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState(null);
-  const [chart, setChart] = useState(null);
+  const [data, setData] = useState([]);
+  const [chart, setChart] = useState([]);
 
   const route = useRoute();
-  const id = route.params.id;  
+  const id = route.params.id;
 
   const screenWidth = Dimensions.get("window").width;
 
@@ -42,7 +42,7 @@ const CoinScreen = () => {
     fetchCoinData();
   }, []);
 
-  if(loading || !data || !chart) {
+  if(loading || data.length === 0 || chart.length === 0) {
     return <ActivityIndicator size="large" />
   }
 

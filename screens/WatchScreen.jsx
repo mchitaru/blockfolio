@@ -16,7 +16,6 @@ const WatchScreen = () => {
   
   const fetchMarketData = async (page) => {    
 
-    console.log("fetch");
     if(loading) return;
     if(!Number.isInteger(page)) return;
     
@@ -41,11 +40,12 @@ const WatchScreen = () => {
 
   const handleLoading = () => {
     return (
-        <ActivityIndicator size="large" />
+      loading && <ActivityIndicator size="large" /> ||
+      <></>
       );
   };
 
-  if(!data || data.length === 0) {
+  if(data.length === 0) {
     return (
       <View style={{alignItems: "center", flex: 1, justifyContent: "center"}}>
         <Text style={{color: "white", fontSize: 20, fontWeight: "bold"}}>Nothing here</Text>
