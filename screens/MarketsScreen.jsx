@@ -6,7 +6,7 @@ import { getMarketData } from "../lib/api";
 
 const PAGE_SIZE = 50;
 
-const HomeScreen = () => {
+const MarketsScreen = () => {
 
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
@@ -26,9 +26,11 @@ const HomeScreen = () => {
     fetchMarketData(1);
   }, []);
 
-  if(!data) {
-    return <ActivityIndicator size="large" />
-  }  
+  const handleLoading = () => {
+    return (
+        <ActivityIndicator size="large" />
+      );
+  };
   
   return ( 
     <FlatList 
@@ -39,6 +41,7 @@ const HomeScreen = () => {
         fetchMarketData(data.length / PAGE_SIZE + 1);
       }}
       refreshing={loading} 
+      ListFooterComponent={handleLoading}
       refreshControl={
         <RefreshControl
           refreshing={loading} 
@@ -50,4 +53,4 @@ const HomeScreen = () => {
    );
 }
  
-export default HomeScreen;
+export default MarketsScreen;
