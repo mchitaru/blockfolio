@@ -1,6 +1,5 @@
 import { ActivityIndicator, Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import CoinHeader from "./components/CoinHeader";
-// import json from '../assets/data/crypto.json';
 import { AntDesign } from '@expo/vector-icons';
 import { LineChart, CandlestickChart } from "react-native-wagmi-charts";
 import { useRoute } from "@react-navigation/native";
