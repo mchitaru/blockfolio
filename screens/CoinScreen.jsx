@@ -75,7 +75,6 @@ const CoinScreen = () => {
                 name={data.market_data.price_change_percentage_24h < 0 ? "caretdown": "caretup"}
                 size={14} 
                 color="white"
-                style={styles.caretIcon}
               />
               <Text style={styles.priceChange}>
                 {data.market_data.price_change_percentage_24h.toFixed(2)}

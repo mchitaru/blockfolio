@@ -14,7 +14,7 @@ const CoinItem = ({item}) => {
 
   const navigation = useNavigation();
 
-  const priceColor = item.price_change_percentage_24h < 0 ? "#ea3943" : "#16c784";
+  const priceColor = (item.price_change_percentage_24h < 0 ? "#ea3943" : "#16c784") || "white";
 
   return ( 
     <Pressable 
@@ -35,12 +35,12 @@ const CoinItem = ({item}) => {
           </View>
           <Text style={styles.text}>{item.symbol.toUpperCase()}</Text>
           <AntDesign 
-            name={item.price_change_percentage_24h < 0 ? "caretdown": "caretup"}
+            name={(item.price_change_percentage_24h < 0 ? "caretdown": "caretup") || "caretup"}
             size={14} 
             color={priceColor}
             style={styles.caretIcon}
           />
-          <Text style={{color: priceColor}}>{item.price_change_percentage_24h.toFixed(2)}%</Text>
+          <Text style={{color: priceColor}}>{item.price_change_percentage_24h?.toFixed(2)}%</Text>
         </View>
       </View>
       <View style={{marginLeft: 'auto', alignItems: 'flex-end'}}>
