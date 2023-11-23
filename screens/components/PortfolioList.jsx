@@ -1,8 +1,11 @@
 import { View, Text, FlatList, StyleSheet, Pressable } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from "@react-navigation/native";
+
 import PortfolioItem from "./PortfolioItem";
 
-const AssetList = () => {
+const PortfolioList = () => {
+  const navigator = useNavigation();
 
   const handleHeader = () => {
     return (
@@ -32,7 +35,10 @@ const AssetList = () => {
 
   const handleFooter = () => {
     return (
-      <Pressable style={styles.buttonContainer}>
+      <Pressable 
+        style={styles.buttonContainer}
+        onPress={() => (navigator.navigate("AddAsset"))}
+      >
         <Text style={styles.buttonText}>Add new asset</Text>
       </Pressable>
     )
@@ -114,4 +120,4 @@ const styles = StyleSheet.create({
   }
 });
  
-export default AssetList;
+export default PortfolioList;
