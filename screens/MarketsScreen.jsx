@@ -17,7 +17,7 @@ const MarketsScreen = () => {
     if(!Number.isInteger(page)) return;
     
     setLoading(true);
-    const mdata = await getMarketData(page, PAGE_SIZE);
+    const mdata = await getMarketData([], page, PAGE_SIZE);
     setData((prevData) => (page === 1 ? mdata : prevData.concat(mdata)));
     setLoading(false);    
   }

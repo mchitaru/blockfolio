@@ -54,7 +54,8 @@ const CoinScreen = () => {
         data={chart.prices.map(([timestamp, value]) => ({ timestamp, value }))}
       >
         <View style={{paddingHorizontal: 10}}>
-          <CoinHeader 
+          <CoinHeader
+            id={data.id}
             image={data.image.small}
             symbol={data.symbol}
             rank={data.market_data.market_cap_rank}

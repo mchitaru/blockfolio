@@ -1,10 +1,20 @@
 import { Image, StyleSheet, Text, View } from "react-native";
-import { Ionicons } from '@expo/vector-icons';
-import { useNavigation } from "@react-navigation/native";
+import { Ionicons, FontAwesome } from '@expo/vector-icons';
+import { useNavigation  } from "@react-navigation/native";
 
-const CoinHeader = ({image, symbol, rank}) => {
+import { useWatchlist } from "../../contexts/WatchlistContext";
+
+const CoinHeader = ({id, image, symbol, rank}) => {
 
   const navigation = useNavigation();
+  const {watchlist, storeData, removeData} = useWatchlist();
+  console.log(watchlist);
+
+  const isWatchlisted = () => (watchlist.some((item) => (item === id)));
+
+  const handleClick = () => {
+    isWatchlisted() ? removeData(id) : storeData(id);
+  }
 
   return ( 
     <View style={styles.container}>
@@ -25,7 +35,12 @@ const CoinHeader = ({image, symbol, rank}) => {
             <Text style={styles.rank}>{rank}</Text>
         </View>
       </View>
-      <Ionicons name="person-circle-outline" size={24} color="white" />
+      <FontAwesome 
+        name={isWatchlisted() ? "star" : "star-o"} 
+        size={24} 
+        color="white"
+        onPress={handleClick}
+      />
     </View>
    );
 }
