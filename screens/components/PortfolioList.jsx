@@ -1,5 +1,4 @@
 import { View, Text, FlatList, StyleSheet, Pressable } from "react-native";
-import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
 
 import PortfolioItem from "./PortfolioItem";
@@ -9,27 +8,9 @@ const PortfolioList = ({data, loading}) => {
 
   const handleHeader = () => {
     return (
-      <>
-        <View style={styles.balanceContainer}>
-          <View>
-            <Text style={styles.balance}>Current balance</Text>
-            <Text style={styles.balanceValue}>$20000</Text>
-            <Text style={styles.valueChange}>$1000 (All Time)</Text>
-          </View>
-          <View style={styles.percentageChangeContainer}>
-            <AntDesign 
-              name={"caretup"}
-              size={14} 
-              color="white"
-              style={styles.caretIcon}
-            />
-            <Text style={styles.percentageChange}>1.2%</Text>
-          </View>
-        </View>
-        <View>
-          <Text style={styles.assetsTitle}>Your assets</Text>
-        </View>
-      </>
+      <View>
+        <Text style={styles.assetsTitle}>Your assets</Text>
+      </View>
     )
   }
 
@@ -58,41 +39,6 @@ const PortfolioList = ({data, loading}) => {
 }
 
 const styles = StyleSheet.create({
-  balance: {
-    color: "white",
-    fontWeight: "600",
-    fontSize: 15
-  },
-  balanceValue: {
-    color: "white",
-    fontSize: 40,
-    fontWeight: "700"
-  },
-  valueChange: {
-    color: "#16c784",
-    fontWeight: "600",
-    fontSize: 16
-  },
-  percentageChange: {
-    color: "white",
-    fontWeight: "500",
-    fontSize: 17
-  },
-  balanceContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginTop: 10,
-    marginBottom: 5,
-    marginHorizontal: 10
-  },
-  percentageChangeContainer: {
-    flexDirection: "row",
-    backgroundColor: "#16c784",
-    paddingHorizontal: 3,
-    paddingVertical: 8,
-    borderRadius: 5
-  },
   assetsTitle: {
     color: "white",
     fontSize: 23,
@@ -113,10 +59,6 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: "600"
   },
-  caretIcon: {
-    alignSelf: 'center',
-    marginRight: 5
-  }
 });
  
 export default PortfolioList;

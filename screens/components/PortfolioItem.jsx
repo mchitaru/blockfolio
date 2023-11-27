@@ -1,5 +1,6 @@
 import { Text, View, Image, StyleSheet } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 const PortfolioItem = ({item}) => {
   return ( 
@@ -8,11 +9,9 @@ const PortfolioItem = ({item}) => {
         source={{uri: item.image}}
         width={30}
         height={30}
+        style={styles.image}
       />
-      <View style={styles.assetContainer}>
-        <Text style={styles.title}>{item.name}</Text>
-        <Text style={styles.symbol}>{item.symbol.toUpperCase()}</Text>
-      </View>
+      <Text style={styles.title}>{item.symbol.toUpperCase()}</Text>
       <View style={styles.priceContainer}>
         <Text style={styles.title}>
         {item.current_price.toLocaleString("en-US", {currency: "USD", style: "currency", minimumFractionDigits: 2, useGrouping: true})}
@@ -24,7 +23,7 @@ const PortfolioItem = ({item}) => {
             color="#16c784"
             style={styles.caretIcon}
           />
-          <Text style={styles.priceChangePercentage}>{item.price_change_percentage_24h}%</Text>
+          <Text style={styles.priceChangePercentage}>{item.price_change_percentage_24h.toFixed(2)}%</Text>
         </View>
       </View>
       <View style={styles.holdingsCointainer}>
@@ -35,18 +34,23 @@ const PortfolioItem = ({item}) => {
           {item.quantity} {item.symbol.toUpperCase()}
         </Text>
       </View>
+      <View style={styles.notificationsCointainer}>
+        <FontAwesome name="bell" size={24} color="white" />
+      </View>
     </View>
    );
 }
 
 const styles = StyleSheet.create({
   image: {
-
+    marginRight: 10,
+    alignSelf: 'center'
   },
   title: {
     color: "white",
     fontSize: 16,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    alignSelf: 'center'
   },
   symbol: {
     color: "grey",
@@ -55,10 +59,12 @@ const styles = StyleSheet.create({
   itemContainer: {
     display: "grid",
     flexDirection: "row",
-    padding: 15
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: '#282828',
+    padding: 15,
   },
   assetContainer: {
-    width: 100,
+    width: 70,
     alignItems: "flex-start"
   },
   priceContainer: {
@@ -79,6 +85,10 @@ const styles = StyleSheet.create({
   holdingsCointainer: {
     marginLeft: "auto",
     alignItems: "flex-end"
+  },
+  notificationsCointainer: {
+    marginLeft: "auto",
+    alignSelf: 'center'
   }
 });
  
