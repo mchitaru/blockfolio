@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "white",
     fontSize: 17,
-    fontWight: "600"
+    fontWeight: "600"
   },
   caretIcon: {
     alignSelf: 'center',
