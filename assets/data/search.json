@@ -1,0 +1,2205 @@
+{
+  "coins": [
+    {
+      "id": "bitcoin",
+      "name": "Bitcoin",
+      "api_symbol": "bitcoin",
+      "symbol": "BTC",
+      "market_cap_rank": 1,
+      "thumb": "https://assets.coingecko.com/coins/images/1/thumb/bitcoin.png",
+      "large": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png"
+    },
+    {
+      "id": "dogecoin",
+      "name": "Dogecoin",
+      "api_symbol": "dogecoin",
+      "symbol": "DOGE",
+      "market_cap_rank": 10,
+      "thumb": "https://assets.coingecko.com/coins/images/5/thumb/dogecoin.png",
+      "large": "https://assets.coingecko.com/coins/images/5/large/dogecoin.png"
+    },
+    {
+      "id": "the-open-network",
+      "name": "Toncoin",
+      "api_symbol": "the-open-network",
+      "symbol": "TON",
+      "market_cap_rank": 12,
+      "thumb": "https://assets.coingecko.com/coins/images/17980/thumb/ton_symbol.png",
+      "large": "https://assets.coingecko.com/coins/images/17980/large/ton_symbol.png"
+    },
+    {
+      "id": "wrapped-bitcoin",
+      "name": "Wrapped Bitcoin",
+      "api_symbol": "wrapped-bitcoin",
+      "symbol": "WBTC",
+      "market_cap_rank": 17,
+      "thumb": "https://assets.coingecko.com/coins/images/7598/thumb/wrapped_bitcoin_wbtc.png",
+      "large": "https://assets.coingecko.com/coins/images/7598/large/wrapped_bitcoin_wbtc.png"
+    },
+    {
+      "id": "litecoin",
+      "name": "Litecoin",
+      "api_symbol": "litecoin",
+      "symbol": "LTC",
+      "market_cap_rank": 19,
+      "thumb": "https://assets.coingecko.com/coins/images/2/thumb/litecoin.png",
+      "large": "https://assets.coingecko.com/coins/images/2/large/litecoin.png"
+    },
+    {
+      "id": "bitcoin-cash",
+      "name": "Bitcoin Cash",
+      "api_symbol": "bitcoin-cash",
+      "symbol": "BCH",
+      "market_cap_rank": 22,
+      "thumb": "https://assets.coingecko.com/coins/images/780/thumb/bitcoin-cash-circle.png",
+      "large": "https://assets.coingecko.com/coins/images/780/large/bitcoin-cash-circle.png"
+    },
+    {
+      "id": "filecoin",
+      "name": "Filecoin",
+      "api_symbol": "filecoin",
+      "symbol": "FIL",
+      "market_cap_rank": 32,
+      "thumb": "https://assets.coingecko.com/coins/images/12817/thumb/filecoin.png",
+      "large": "https://assets.coingecko.com/coins/images/12817/large/filecoin.png"
+    },
+    {
+      "id": "bitcoin-cash-sv",
+      "name": "Bitcoin SV",
+      "api_symbol": "bitcoin-cash-sv",
+      "symbol": "BSV",
+      "market_cap_rank": 60,
+      "thumb": "https://assets.coingecko.com/coins/images/6799/thumb/BSV.png",
+      "large": "https://assets.coingecko.com/coins/images/6799/large/BSV.png"
+    },
+    {
+      "id": "whitebit",
+      "name": "WhiteBIT Coin",
+      "api_symbol": "whitebit",
+      "symbol": "WBT",
+      "market_cap_rank": 64,
+      "thumb": "https://assets.coingecko.com/coins/images/27045/thumb/wbt_token.png",
+      "large": "https://assets.coingecko.com/coins/images/27045/large/wbt_token.png"
+    },
+    {
+      "id": "kucoin-shares",
+      "name": "KuCoin",
+      "api_symbol": "kucoin-shares",
+      "symbol": "KCS",
+      "market_cap_rank": 72,
+      "thumb": "https://assets.coingecko.com/coins/images/1047/thumb/sa9z79.png",
+      "large": "https://assets.coingecko.com/coins/images/1047/large/sa9z79.png"
+    },
+    {
+      "id": "apecoin",
+      "name": "ApeCoin",
+      "api_symbol": "apecoin",
+      "symbol": "APE",
+      "market_cap_rank": 84,
+      "thumb": "https://assets.coingecko.com/coins/images/24383/thumb/apecoin.jpg",
+      "large": "https://assets.coingecko.com/coins/images/24383/large/apecoin.jpg"
+    },
+    {
+      "id": "rollbit-coin",
+      "name": "Rollbit Coin",
+      "api_symbol": "rollbit-coin",
+      "symbol": "RLB",
+      "market_cap_rank": 93,
+      "thumb": "https://assets.coingecko.com/coins/images/24552/thumb/unziL6wO_400x400.jpg",
+      "large": "https://assets.coingecko.com/coins/images/24552/large/unziL6wO_400x400.jpg"
+    },
+    {
+      "id": "coinbase-wrapped-staked-eth",
+      "name": "Coinbase Wrapped Staked ETH",
+      "api_symbol": "coinbase-wrapped-staked-eth",
+      "symbol": "CBETH",
+      "market_cap_rank": 120,
+      "thumb": "https://assets.coingecko.com/coins/images/27008/thumb/cbeth.png",
+      "large": "https://assets.coingecko.com/coins/images/27008/large/cbeth.png"
+    },
+    {
+      "id": "worldcoin-wld",
+      "name": "Worldcoin",
+      "api_symbol": "worldcoin-wld",
+      "symbol": "WLD",
+      "market_cap_rank": 142,
+      "thumb": "https://assets.coingecko.com/coins/images/31069/thumb/worldcoin.jpeg",
+      "large": "https://assets.coingecko.com/coins/images/31069/large/worldcoin.jpeg"
+    },
+    {
+      "id": "enjincoin",
+      "name": "Enjin Coin",
+      "api_symbol": "enjincoin",
+      "symbol": "ENJ",
+      "market_cap_rank": 151,
+      "thumb": "https://assets.coingecko.com/coins/images/1102/thumb/enjin-coin-logo.png",
+      "large": "https://assets.coingecko.com/coins/images/1102/large/enjin-coin-logo.png"
+    },
+    {
+      "id": "bitcoin-gold",
+      "name": "Bitcoin Gold",
+      "api_symbol": "bitcoin-gold",
+      "symbol": "BTG",
+      "market_cap_rank": 159,
+      "thumb": "https://assets.coingecko.com/coins/images/1043/thumb/bitcoin-gold-logo.png",
+      "large": "https://assets.coingecko.com/coins/images/1043/large/bitcoin-gold-logo.png"
+    },
+    {
+      "id": "jasmycoin",
+      "name": "JasmyCoin",
+      "api_symbol": "jasmycoin",
+      "symbol": "JASMY",
+      "market_cap_rank": 166,
+      "thumb": "https://assets.coingecko.com/coins/images/13876/thumb/JASMY200x200.jpg",
+      "large": "https://assets.coingecko.com/coins/images/13876/large/JASMY200x200.jpg"
+    },
+    {
+      "id": "ravencoin",
+      "name": "Ravencoin",
+      "api_symbol": "ravencoin",
+      "symbol": "RVN",
+      "market_cap_rank": 177,
+      "thumb": "https://assets.coingecko.com/coins/images/3412/thumb/ravencoin.png",
+      "large": "https://assets.coingecko.com/coins/images/3412/large/ravencoin.png"
+    },
+    {
+      "id": "escoin-token",
+      "name": "Escoin",
+      "api_symbol": "escoin-token",
+      "symbol": "ELG",
+      "market_cap_rank": 178,
+      "thumb": "https://assets.coingecko.com/coins/images/13566/thumb/escoin-200.png",
+      "large": "https://assets.coingecko.com/coins/images/13566/large/escoin-200.png"
+    },
+    {
+      "id": "siacoin",
+      "name": "Siacoin",
+      "api_symbol": "siacoin",
+      "symbol": "SC",
+      "market_cap_rank": 184,
+      "thumb": "https://assets.coingecko.com/coins/images/289/thumb/siacoin.png",
+      "large": "https://assets.coingecko.com/coins/images/289/large/siacoin.png"
+    },
+    {
+      "id": "memecoin-2",
+      "name": "Memecoin",
+      "api_symbol": "memecoin-2",
+      "symbol": "MEME",
+      "market_cap_rank": 195,
+      "thumb": "https://assets.coingecko.com/coins/images/32528/thumb/memecoin_%282%29.png",
+      "large": "https://assets.coingecko.com/coins/images/32528/large/memecoin_%282%29.png"
+    },
+    {
+      "id": "telcoin",
+      "name": "Telcoin",
+      "api_symbol": "telcoin",
+      "symbol": "TEL",
+      "market_cap_rank": 213,
+      "thumb": "https://assets.coingecko.com/coins/images/1899/thumb/tel.png",
+      "large": "https://assets.coingecko.com/coins/images/1899/large/tel.png"
+    },
+    {
+      "id": "baby-doge-coin",
+      "name": "Baby Doge Coin",
+      "api_symbol": "baby-doge-coin",
+      "symbol": "BABYDOGE",
+      "market_cap_rank": 215,
+      "thumb": "https://assets.coingecko.com/coins/images/16125/thumb/babydoge.jpg",
+      "large": "https://assets.coingecko.com/coins/images/16125/large/babydoge.jpg"
+    },
+    {
+      "id": "bitcoin-avalanche-bridged-btc-b",
+      "name": "Bitcoin Avalanche Bridged (BTC.b)",
+      "api_symbol": "bitcoin-avalanche-bridged-btc-b",
+      "symbol": "BTC.B",
+      "market_cap_rank": 251,
+      "thumb": "https://assets.coingecko.com/coins/images/26115/thumb/btcb.png",
+      "large": "https://assets.coingecko.com/coins/images/26115/large/btcb.png"
+    },
+    {
+      "id": "uquid-coin",
+      "name": "Uquid Coin",
+      "api_symbol": "uquid-coin",
+      "symbol": "UQC",
+      "market_cap_rank": 259,
+      "thumb": "https://assets.coingecko.com/coins/images/1341/thumb/uquid-coin.png",
+      "large": "https://assets.coingecko.com/coins/images/1341/large/uquid-coin.png"
+    }
+  ],
+  "exchanges": [
+    {
+      "id": "coinw",
+      "name": "CoinW",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/1172/thumb/coinw.jpeg",
+      "large": "https://assets.coingecko.com/markets/images/1172/large/coinw.jpeg"
+    },
+    {
+      "id": "gdax",
+      "name": "Coinbase Exchange",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/23/thumb/Coinbase_Coin_Primary.png",
+      "large": "https://assets.coingecko.com/markets/images/23/large/Coinbase_Coin_Primary.png"
+    },
+    {
+      "id": "kucoin",
+      "name": "KuCoin",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/61/thumb/kucoin.png",
+      "large": "https://assets.coingecko.com/markets/images/61/large/kucoin.png"
+    },
+    {
+      "id": "hotcoin_global",
+      "name": "Hotcoin Global",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/1345/thumb/logo3.png",
+      "large": "https://assets.coingecko.com/markets/images/1345/large/logo3.png"
+    },
+    {
+      "id": "deepcoin",
+      "name": "Deepcoin",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/1005/thumb/deepcoin.jpeg",
+      "large": "https://assets.coingecko.com/markets/images/1005/large/deepcoin.jpeg"
+    },
+    {
+      "id": "cointr",
+      "name": "CoinTR Pro",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/1028/thumb/cointr.png",
+      "large": "https://assets.coingecko.com/markets/images/1028/large/cointr.png"
+    },
+    {
+      "id": "coinsbit",
+      "name": "Coinsbit",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/267/thumb/Coinsbit.png",
+      "large": "https://assets.coingecko.com/markets/images/267/large/Coinsbit.png"
+    },
+    {
+      "id": "cointiger",
+      "name": "CoinTiger",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/204/thumb/cointiger.png",
+      "large": "https://assets.coingecko.com/markets/images/204/large/cointiger.png"
+    },
+    {
+      "id": "coinstore",
+      "name": "Coinstore",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/747/thumb/coinstore.jpeg",
+      "large": "https://assets.coingecko.com/markets/images/747/large/coinstore.jpeg"
+    },
+    {
+      "id": "coincatch",
+      "name": "CoinCatch",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/1214/thumb/Lark20230707-101051.png",
+      "large": "https://assets.coingecko.com/markets/images/1214/large/Lark20230707-101051.png"
+    },
+    {
+      "id": "kumex",
+      "name": "KuCoin Futures",
+      "market_type": "futures",
+      "thumb": "https://assets.coingecko.com/markets/images/471/thumb/kucoin.png",
+      "large": "https://assets.coingecko.com/markets/images/471/large/kucoin.png"
+    },
+    {
+      "id": "coinex",
+      "name": "CoinEx",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/135/thumb/coinex.jpg",
+      "large": "https://assets.coingecko.com/markets/images/135/large/coinex.jpg"
+    },
+    {
+      "id": "coinone",
+      "name": "Coinone",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/20/thumb/coinone_circle_500x500.png",
+      "large": "https://assets.coingecko.com/markets/images/20/large/coinone_circle_500x500.png"
+    },
+    {
+      "id": "coincheck",
+      "name": "Coincheck",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/18/thumb/Coincheck.jpg",
+      "large": "https://assets.coingecko.com/markets/images/18/large/Coincheck.jpg"
+    },
+    {
+      "id": "max_maicoin",
+      "name": "Max Maicoin",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/218/thumb/max.jpg",
+      "large": "https://assets.coingecko.com/markets/images/218/large/max.jpg"
+    },
+    {
+      "id": "bitcointry_exchange",
+      "name": "Bitcointry Exchange",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/1231/thumb/Bitcointry.jpg",
+      "large": "https://assets.coingecko.com/markets/images/1231/large/Bitcointry.jpg"
+    },
+    {
+      "id": "dcoin",
+      "name": "Dcoin",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/319/thumb/%E8%B5%84%E6%BA%90_4_3x_2.png",
+      "large": "https://assets.coingecko.com/markets/images/319/large/%E8%B5%84%E6%BA%90_4_3x_2.png"
+    },
+    {
+      "id": "mercado_bitcoin",
+      "name": "Mercado Bitcoin",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/34/thumb/logo_MB_hexagono.png",
+      "large": "https://assets.coingecko.com/markets/images/34/large/logo_MB_hexagono.png"
+    },
+    {
+      "id": "coinjar",
+      "name": "CoinJar Exchange",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/176/thumb/Logomark_2022200h_thumb.png",
+      "large": "https://assets.coingecko.com/markets/images/176/large/Logomark_2022200h_thumb.png"
+    },
+    {
+      "id": "coindcx",
+      "name": "CoinDCX",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/520/thumb/coindcx.png",
+      "large": "https://assets.coingecko.com/markets/images/520/large/coindcx.png"
+    },
+    {
+      "id": "coinspro",
+      "name": "Coins.ph",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/999/thumb/coinspro.png",
+      "large": "https://assets.coingecko.com/markets/images/999/large/coinspro.png"
+    },
+    {
+      "id": "altcointrader",
+      "name": "AltcoinTrader",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/661/thumb/Altcoin.png",
+      "large": "https://assets.coingecko.com/markets/images/661/large/Altcoin.png"
+    },
+    {
+      "id": "coin_metro",
+      "name": "Coinmetro",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/386/thumb/Coinmetro_Exchange_Logo_%282%29.png",
+      "large": "https://assets.coingecko.com/markets/images/386/large/Coinmetro_Exchange_Logo_%282%29.png"
+    },
+    {
+      "id": "coinlist",
+      "name": "Coinlist",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/587/thumb/black.png",
+      "large": "https://assets.coingecko.com/markets/images/587/large/black.png"
+    },
+    {
+      "id": "coinzoom",
+      "name": "Coinzoom",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/656/thumb/Up7Yiexp_400x400.png",
+      "large": "https://assets.coingecko.com/markets/images/656/large/Up7Yiexp_400x400.png"
+    }
+  ],
+  "icos": [],
+  "categories": [
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 37,
+      "name": "Privacy Coins"
+    },
+    {
+      "id": 40,
+      "name": "Index"
+    },
+    {
+      "id": 36,
+      "name": "Stablecoins"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 87,
+      "name": "KRW Stablecoin"
+    },
+    {
+      "id": 50,
+      "name": "CNY Stablecoin"
+    },
+    {
+      "id": 51,
+      "name": "USD Stablecoin"
+    },
+    {
+      "id": 53,
+      "name": "GBP Stablecoin"
+    },
+    {
+      "id": 52,
+      "name": "EUR Stablecoin"
+    },
+    {
+      "id": 173,
+      "name": "IDR Stablecoin"
+    },
+    {
+      "id": 174,
+      "name": "SGD Stablcoin"
+    },
+    {
+      "id": 171,
+      "name": "TRY Stablecoin"
+    },
+    {
+      "id": 172,
+      "name": "JPY Stablecoin"
+    },
+    {
+      "id": 227,
+      "name": "Dog-Themed Coins"
+    },
+    {
+      "id": 229,
+      "name": "Frog-Themed Coins"
+    },
+    {
+      "id": 232,
+      "name": "Elon Musk-Inspired Coins"
+    }
+  ],
+  "nfts": [
+    {
+      "id": "bitcoin-pigs",
+      "name": "Bitcoin Pigs",
+      "symbol": "BITCOINPIGS",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3355/thumb/bitcoin-pigs.jpg"
+    },
+    {
+      "id": "bitcoin-bear-cubs",
+      "name": "Bitcoin Bear Cubs",
+      "symbol": "BBC",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3280/thumb/bitcoin-bear-cubs.png"
+    },
+    {
+      "id": "elite-ape-entry-coins",
+      "name": "Elite Ape Entry Coins",
+      "symbol": "COINS",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/764/thumb/elite-ape-entry-coins.jpg"
+    },
+    {
+      "id": "cursed-bitcoin-punks",
+      "name": "Cursed Bitcoin Punks",
+      "symbol": "CURSEDBITCOINPUNKS",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3311/thumb/cursed-bitcoin-punks.png"
+    },
+    {
+      "id": "bitcoin-rocks",
+      "name": "Bitcoin Rocks",
+      "symbol": "BITCOINROCKS",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3713/thumb/bitcoin-rocks.jpg"
+    },
+    {
+      "id": "gitcoin-presents",
+      "name": "Gitcoin Presents",
+      "symbol": "GTCP",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3063/thumb/gitcoin-presents.png"
+    },
+    {
+      "id": "bitcoin-skellies",
+      "name": "Bitcoin Skellies",
+      "symbol": "BITCOIN_SKELLIES",
+      "thumb": "missing_thumb.png"
+    },
+    {
+      "id": "bitcoin-pandas",
+      "name": "Bitcoin Pandas",
+      "symbol": "BITCOIN-PANDAS",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3365/thumb/bitcoin-pandas.jpg"
+    },
+    {
+      "id": "murakami-lucky-cat-coin-bank",
+      "name": "Murakami Lucky Cat Coin Bank",
+      "symbol": "MURAKAMI-LUCKY-CAT-COIN-BANK",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/421/thumb/murakami-lucky-cat-coin-bank.png"
+    },
+    {
+      "id": "bitcoin-knight-s2",
+      "name": "Bitcoin Knight S2",
+      "symbol": "BITCOIN-KNIGHT-S2",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3362/thumb/bitcoin-knight-s2.png"
+    },
+    {
+      "id": "bitcoin-punks",
+      "name": "Bitcoin Punks",
+      "symbol": "BITCOIN-PUNKS",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3259/thumb/bitcoin-punks.png"
+    },
+    {
+      "id": "bitcoin-frogs",
+      "name": "Bitcoin Frogs",
+      "symbol": "BITCOIN-FROGS",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3262/thumb/bitcoin-frogs.png"
+    },
+    {
+      "id": "bitcoin-whales",
+      "name": "Bitcoin Whales",
+      "symbol": "BITCOINWHALES",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3269/thumb/bitcoin-whales.png"
+    },
+    {
+      "id": "bitcoin-wizards",
+      "name": "Bitcoin Wizards",
+      "symbol": "BITCOIN-WIZARDS",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3683/thumb/wizards.png"
+    },
+    {
+      "id": "bitcoin-rugs",
+      "name": "Bitcoin Rugs",
+      "symbol": "BITCOINRUGS",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3313/thumb/bitcoin-rugs.png"
+    },
+    {
+      "id": "bitcoin-mechanics",
+      "name": "Bitcoin Mechanics",
+      "symbol": "BTC_MECHANICS",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3306/thumb/bitcoin-mechanics.png"
+    },
+    {
+      "id": "bitcoin-crypto-dickbutts",
+      "name": "Bitcoin Crypto DickButts",
+      "symbol": "BITCOIN-CRYPTODICKBUTTS",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3656/thumb/bitcoin-crypto-dickbutts.png"
+    },
+    {
+      "id": "right-place-right-time-bitcoin-volatility-art-by-matt-kane",
+      "name": "Right Place & Right Time - Bitcoin Volatility Art",
+      "symbol": "VLY",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3530/thumb/right-place-right-time-bitcoin-volatility-art-by-matt-kane.png"
+    },
+    {
+      "id": "bitcoin-bandits",
+      "name": "Bitcoin Bandits",
+      "symbol": "BITCOIN-BANDITS",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3266/thumb/bitcoin-bandits.png"
+    },
+    {
+      "id": "bitcoin-buds",
+      "name": "Bitcoin Buds ",
+      "symbol": "BITCOIN-BUDS",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3285/thumb/bitcoin-buds.jpg"
+    },
+    {
+      "id": "bitcoin-eyes",
+      "name": "Bitcoin eyes",
+      "symbol": "BITCOIN-EYES",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3325/thumb/bitcoin-eyes.jpg"
+    },
+    {
+      "id": "bitcoinorb",
+      "name": "BITCOINORB",
+      "symbol": "BTCORB",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/2944/thumb/bitcoinorb.png"
+    },
+    {
+      "id": "cheekz-coins",
+      "name": "Cheekz Coins",
+      "symbol": "CHEEKZCOINS",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3319/thumb/cheekz-coins.gif"
+    },
+    {
+      "id": "superpower-squad-mystery-box-kucoin-wallet-bsc",
+      "name": "Superpower Squad Mystery Box Kucoin Wallet Bsc",
+      "symbol": "SSMBKWBSC",
+      "thumb": "missing_thumb.png"
+    },
+    {
+      "id": "bitcoinbearclub",
+      "name": "Bitcoin Bear Club",
+      "symbol": "BBC",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/1284/thumb/unnamed.gif"
+    }
+  ]
+}

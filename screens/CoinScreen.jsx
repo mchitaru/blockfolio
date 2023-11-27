@@ -1,5 +1,5 @@
 import { ActivityIndicator, Dimensions, Image, StyleSheet, Text, View } from "react-native";
-import CoinHeader from "./components/CoinHeader";
+import MarketHeader from "./components/MarketHeader";
 import { AntDesign } from '@expo/vector-icons';
 import { LineChart, CandlestickChart } from "react-native-wagmi-charts";
 import { useRoute } from "@react-navigation/native";
@@ -54,7 +54,7 @@ const CoinScreen = () => {
         data={chart.prices.map(([timestamp, value]) => ({ timestamp, value }))}
       >
         <View style={{paddingHorizontal: 10}}>
-          <CoinHeader
+          <MarketHeader
             id={data.id}
             image={data.image.small}
             symbol={data.symbol}

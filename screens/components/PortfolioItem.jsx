@@ -5,7 +5,7 @@ const PortfolioItem = () => {
   return ( 
     <View style={styles.itemContainer}>
       <Image
-        source={{uri: ""}}
+        source={{uri: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png"}}
         width={30}
         height={30}
       />

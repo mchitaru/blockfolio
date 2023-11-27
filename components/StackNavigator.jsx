@@ -1,7 +1,8 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TabNavigator from './TabNavigator';
 import CoinScreen from '../screens/CoinScreen';
-import AddAssetScreen from '../screens/AddAssetScreen';
+import AddTransactionScreen from '../screens/AddTransactionScreen';
+import SelectMarketScreen from '../screens/SelectMarketScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -10,30 +11,23 @@ const StackNavigator = () => {
     <>
       <Stack.Navigator
         initialRouteName="Root"
+        screenOptions={{ headerShown: false }}
       >
         <Stack.Screen 
           name="Root" 
           component={TabNavigator}
-          options={{ headerShown: false }}
         />
         <Stack.Screen 
           name="Coin" 
           component={CoinScreen}
-          options={{ headerShown: false }}
         />
         <Stack.Screen 
-          name="AddAsset" 
-          component={AddAssetScreen}
-          options={{
-            title: "Add New Asset",
-            headerStyle: {
-              backgroundColor: "#00002F",
-            },
-            headerTintColor: "white",
-            headerTitleStyle: {
-              fontWeight: "bold",
-            },
-          }} 
+          name="SelectMarket" 
+          component={SelectMarketScreen}
+        />
+        <Stack.Screen 
+          name="AddTransaction" 
+          component={AddTransactionScreen}
         />
       </Stack.Navigator>
     </>

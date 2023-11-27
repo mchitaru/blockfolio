@@ -37,9 +37,9 @@ const PortfolioList = () => {
     return (
       <Pressable 
         style={styles.buttonContainer}
-        onPress={() => (navigator.navigate("AddAsset"))}
+        onPress={() => (navigator.navigate("SelectMarket"))}
       >
-        <Text style={styles.buttonText}>Add new asset</Text>
+        <Text style={styles.buttonText}>Add transaction</Text>
       </Pressable>
     )
   }
@@ -55,8 +55,6 @@ const PortfolioList = () => {
     </View>
    );
 }
-
-// "#ea3943" : "#16c784"
 
 const styles = StyleSheet.create({
   balance: {

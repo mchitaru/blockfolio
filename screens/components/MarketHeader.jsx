@@ -4,7 +4,7 @@ import { useNavigation  } from "@react-navigation/native";
 
 import { useWatchlist } from "../../contexts/WatchlistContext";
 
-const CoinHeader = ({id, image, symbol, rank}) => {
+const MarketHeader = ({id, image, symbol, rank}) => {
 
   const navigation = useNavigation();
   const {watchlist, storeData, removeData} = useWatchlist();
@@ -77,4 +77,4 @@ const styles = StyleSheet.create({
   },
 });
  
-export default CoinHeader;
+export default MarketHeader;
