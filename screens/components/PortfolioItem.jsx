@@ -1,20 +1,22 @@
 import { Text, View, Image, StyleSheet } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 
-const PortfolioItem = () => {
+const PortfolioItem = ({item}) => {
   return ( 
     <View style={styles.itemContainer}>
       <Image
-        source={{uri: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png"}}
+        source={{uri: item.image}}
         width={30}
         height={30}
       />
-      <View>
-        <Text style={styles.title}>Bitcoin</Text>
-        <Text style={styles.symbol}>BTC</Text>
+      <View style={styles.assetContainer}>
+        <Text style={styles.title}>{item.name}</Text>
+        <Text style={styles.symbol}>{item.symbol.toUpperCase()}</Text>
       </View>
       <View style={styles.priceContainer}>
-        <Text style={styles.title}>$4000</Text>
+        <Text style={styles.title}>
+        {item.current_price.toLocaleString("en-US", {currency: "USD", style: "currency", minimumFractionDigits: 2, useGrouping: true})}
+        </Text>
         <View style={styles.priceChangeContainer}>
           <AntDesign 
             name={"caretup"}
@@ -22,12 +24,16 @@ const PortfolioItem = () => {
             color="#16c784"
             style={styles.caretIcon}
           />
-          <Text style={styles.priceChangePercentage}>1.2%</Text>
+          <Text style={styles.priceChangePercentage}>{item.price_change_percentage_24h}%</Text>
         </View>
       </View>
       <View style={styles.holdingsCointainer}>
-        <Text style={styles.title}>$8000</Text>
-        <Text style={styles.symbol}>2 BTC</Text>
+        <Text style={styles.title}>
+          {item.value.toLocaleString("en-US", {currency: "USD", style: "currency", minimumFractionDigits: 2, useGrouping: true})}
+        </Text>
+        <Text style={styles.symbol}>
+          {item.quantity} {item.symbol.toUpperCase()}
+        </Text>
       </View>
     </View>
    );
@@ -47,11 +53,17 @@ const styles = StyleSheet.create({
     fontWeight: "600"
   },
   itemContainer: {
+    display: "grid",
     flexDirection: "row",
     padding: 15
   },
+  assetContainer: {
+    width: 100,
+    alignItems: "flex-start"
+  },
   priceContainer: {
-    marginLeft: "auto"
+    marginLeft: "auto",
+    alignItems: "flex-end",
   },
   priceChangeContainer: {
     flexDirection: "row"

@@ -1,15 +1,30 @@
 import { useEffect, useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+
+import { usePortfolio } from "../contexts/PortfolioContext";
 import PortfolioHeader from "./components/PortfolioHeader";
 import { getCoinPrice } from "../lib/api";
 
 const AddTransactionScreen = ({route, navigation}) => {
   const {id, image, symbol} = route.params;
+  const {portfolio, storeTransaction, removeTransaction} = usePortfolio();
 
   const [loading, setLoading] = useState(false);
   const [quantity, setQuantity] = useState("");
   const [price, setPrice] = useState(0);
   const [buy, setBuy] = useState(true);
+
+  const addTransaction = async () => {
+    await storeTransaction(
+      { 
+        id, 
+        date: Date.now(), 
+        quantity:( buy ? quantity: -quantity ),
+        price
+      }
+    );
+    navigation.navigate("Portfolio");
+  }
 
   const fetchMarketPrice = async () => {    
 
@@ -64,7 +79,7 @@ const AddTransactionScreen = ({route, navigation}) => {
         </View>
         <Pressable 
           style={styles.buttonContainer}
-          onPress={() => (navigator.navigate("AddAsset"))}
+          onPress={addTransaction}
         >
           <Text style={styles.buttonText}>Add transaction</Text>
         </Pressable>

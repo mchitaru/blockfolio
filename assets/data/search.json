@@ -10,6 +10,15 @@
       "large": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png"
     },
     {
+      "id": "ethereum",
+      "name": "Ethereum",
+      "api_symbol": "ethereum",
+      "symbol": "ETH",
+      "market_cap_rank": 2,
+      "thumb": "https://assets.coingecko.com/coins/images/279/thumb/ethereum.png",
+      "large": "https://assets.coingecko.com/coins/images/279/large/ethereum.png"
+    },
+    {
       "id": "dogecoin",
       "name": "Dogecoin",
       "api_symbol": "dogecoin",

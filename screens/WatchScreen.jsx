@@ -1,9 +1,9 @@
 import { ActivityIndicator, FlatList, RefreshControl, Text, View } from 'react-native';
+import { useEffect, useState } from 'react';
+
 import CoinItem from '../components/CoinItem';
 import { useWatchlist } from '../contexts/WatchlistContext';
-
 import { getMarketData } from '../lib/api';
-import { useEffect, useState } from 'react';
 
 const PAGE_SIZE = 50;
 

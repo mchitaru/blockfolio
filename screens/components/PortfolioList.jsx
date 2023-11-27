@@ -4,7 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 
 import PortfolioItem from "./PortfolioItem";
 
-const PortfolioList = () => {
+const PortfolioList = ({data, loading}) => {
   const navigator = useNavigation();
 
   const handleHeader = () => {
@@ -47,8 +47,9 @@ const PortfolioList = () => {
   return ( 
     <View>
       <FlatList 
-        data={[{id: "bitcoin"}]}
-        renderItem={(item) => <PortfolioItem data={item}/>}
+        data={data}
+        refreshing={loading} 
+        renderItem={({item}) => <PortfolioItem item={item}/>}
         ListHeaderComponent={handleHeader}
         ListFooterComponent={handleFooter}
       />

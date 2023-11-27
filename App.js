@@ -5,6 +5,7 @@ import { NavigationContainer, DarkTheme } from '@react-navigation/native';
 
 import StackNavigator from './components/StackNavigator';
 import WatchlistProvider from './contexts/WatchlistContext';
+import PortfolioProvider from './contexts/PortfolioContext';
 
 const MyTheme = {
   ...DarkTheme,
@@ -18,12 +19,14 @@ export default function App() {
   return (
     <NavigationContainer theme={MyTheme}>
       <GestureHandlerRootView style={{ flex: 1 }}>
-        <WatchlistProvider>
-          <View style={styles.container}>
-            <StackNavigator />
-            <StatusBar style='light' />
-          </View>
-        </WatchlistProvider>
+        <PortfolioProvider>
+          <WatchlistProvider>
+            <View style={styles.container}>
+              <StackNavigator />
+              <StatusBar style='light' />
+            </View>
+          </WatchlistProvider>
+        </PortfolioProvider>
       </GestureHandlerRootView>
     </NavigationContainer>
   );
