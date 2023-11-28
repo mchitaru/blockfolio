@@ -7461,6 +7461,34 @@
     "roi": null,
     "last_updated": "2023-11-23T06:58:15.136Z",
     "price_change_percentage_24h_in_currency": 0.0003827143650692778
+  },
+  {
+    "id": "mcdex",
+    "symbol": "mcb",
+    "name": "MUX Protocol",
+    "image": "https://assets.coingecko.com/coins/images/11796/large/mux.jpg?1696511672",
+    "current_price": 11.48,
+    "market_cap": 43616716,
+    "market_cap_rank": 531,
+    "fully_diluted_valuation": 55085319,
+    "total_volume": 300519,
+    "high_24h": 12.54,
+    "low_24h": 10.98,
+    "price_change_24h": -0.984615291104399,
+    "price_change_percentage_24h": -7.90094,
+    "market_cap_change_24h": -3674899.004818909,
+    "market_cap_change_percentage_24h": -7.77072,
+    "circulating_supply": 3803143,
+    "total_supply": 4803143.54867189,
+    "max_supply": 4803143,
+    "ath": 68.36,
+    "ath_change_percentage": -83.25065,
+    "ath_date": "2021-10-17T04:14:51.092Z",
+    "atl": 0.911402,
+    "atl_change_percentage": 1156.20759,
+    "atl_date": "2020-10-30T03:59:02.101Z",
+    "roi": null,
+    "last_updated": "2023-11-28T08:57:33.501Z"
   }
 ]
 ]

@@ -2,6 +2,7 @@ import { View, Text, FlatList, StyleSheet, Pressable, RefreshControl } from "rea
 import { useEffect, useState } from 'react';
 import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
+import { FontAwesome } from '@expo/vector-icons';
 
 import PortfolioItem from "./components/PortfolioItem";
 import { usePortfolio } from "../contexts/PortfolioContext";
@@ -15,6 +16,10 @@ const PortfolioScreen = () => {
   const { portfolio } = usePortfolio();
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
+  const [value, setValue] = useState(0);
+  const [percentageChange, setPercentageChange] = useState(0);
+
+  const changeColor = (percentageChange < 0 ? "#ea3943" : "#16c784") || "white";
 
   const fetchMarketData = async (page) => {    
 
@@ -28,6 +33,8 @@ const PortfolioScreen = () => {
       const ids = portfolio.map((item) => (item.id));
       const mdata = await getMarketData(ids, page, PAGE_SIZE);
       const fulldata = computePortfolio(portfolio, mdata);
+      setValue(fulldata.value);
+      setPercentageChange(fulldata.percentageChange);
       setData((prevData) => (page === 1 ? fulldata.assets : prevData.concat(fulldata.assets)));
       setLoading(false);    
     }
@@ -39,29 +46,47 @@ const PortfolioScreen = () => {
 
   const handleHeader = () => {
     return (
-      <View style={styles.balanceContainer}>
-        <View>
-          <Text style={styles.balance}>Portfolio 1</Text>
-          <Text style={styles.balanceValue}>$20000</Text>
-        </View>
-        <View>
-          <View style={styles.percentageChangeContainer}>
-            <AntDesign 
-              name={"caretup"}
-              size={14} 
-              color="#16c784"
-              style={styles.caretIcon}
-            />
-            <Text style={styles.percentageChange}>1.2%</Text>
+      <View>
+        <View style={styles.balanceContainer}>
+          <View>
+            <Text style={styles.balance}>Portfolio 1</Text>
+            <Text style={styles.balanceValue}>
+              {value.toLocaleString("en-US", {currency: "USD", style: "currency", minimumFractionDigits: 2, useGrouping: true})}
+            </Text>
           </View>
-          <AntDesign 
-            name="areachart" 
-            size={24} color="white" 
-            style={styles.chartIcon}
-          />          
+          <View>
+            <View style={styles.percentageChangeContainer}>
+              <AntDesign 
+                name={(percentageChange < 0 ? "caretdown": "caretup") || "caretup"}
+                size={14} 
+                color={changeColor}
+                style={styles.caretIcon}
+              />
+              <Text style={StyleSheet.flatten([styles.percentageChange, {color: changeColor}])}>{percentageChange.toFixed(2)}%</Text>
+            </View>
+            <AntDesign 
+              name="areachart" 
+              size={20} color="white" 
+              style={styles.chartIcon}
+            />          
+          </View>
+        </View>
+        <View style={styles.headerContainer}>
+          <View style={styles.assetContainer}>          
+            <Text style={styles.headerText}>Asset</Text>
+          </View>
+          <View style={styles.priceContainer}>
+            <Text style={styles.headerText}>Price</Text>
+          </View>
+          <View style={styles.allocationContainer}>
+            <Text style={styles.headerText}>Allocation</Text>
+          </View>
+          <View style={styles.notificationsCointainer}>
+            <FontAwesome name="bell" size={10} color="white" />
+          </View>
         </View>
       </View>
-    )
+  )
   }
 
   const handleFooter = () => {
@@ -80,14 +105,14 @@ const PortfolioScreen = () => {
       <FlatList 
         data={data}
         refreshing={loading} 
-        renderItem={({item}) => <PortfolioItem item={item}/>}
+        renderItem={({item}) => <PortfolioItem item={item} total={value}/>}
         ListHeaderComponent={handleHeader}
         ListFooterComponent={handleFooter}
         refreshControl={
           <RefreshControl
             refreshing={loading} 
             tintColor="white"
-            onRefresh={() => {}}
+            onRefresh={() => fetchMarketData(1)}
           />
         }  
       />
@@ -103,18 +128,14 @@ const styles = StyleSheet.create({
   },
   balanceValue: {
     color: "white",
-    fontSize: 40,
-    fontWeight: "700"
+    fontSize: 30,
+    fontWeight: "700",
+    paddingTop: 10
   },
   valueChange: {
     color: "#16c784",
     fontWeight: "600",
     fontSize: 16
-  },
-  percentageChange: {
-    color: "#16c784",
-    fontWeight: "500",
-    fontSize: 18
   },
   balanceContainer: {
     flexDirection: "row",
@@ -123,15 +144,17 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 5,
     marginHorizontal: 10,
-    padding: 15,
+    padding: 20,
     backgroundColor: "#00005F",
     borderRadius: 15
   },
+  percentageChange: {
+    color: "#16c784",
+    fontWeight: "500",
+  },
   percentageChangeContainer: {
     flexDirection: "row",
-    // backgroundColor: "#16c784",
     paddingHorizontal: 5,
-    // paddingVertical: 20,
     borderRadius: 5,
   },
   caretIcon: {
@@ -141,7 +164,37 @@ const styles = StyleSheet.create({
   chartIcon: {
     alignSelf: "flex-end",
     marginRight: 5,
-    paddingVertical: 15
+    paddingTop: 10,
+    marginVertical: 10,    
+  },
+  headerContainer: {
+    flexDirection: "row",
+    paddingHorizontal: 10,
+    paddingTop: 10,
+    paddingBottom: 5,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: '#282828',
+  },
+  assetContainer: {
+    minWidth: 80,
+    marginRight: "auto",
+    alignItems: "flex-start"
+  },
+  priceContainer: {
+    minWidth: 150,
+    alignItems: "flex-end",
+  },
+  allocationContainer: {
+    minWidth: 100,
+    alignItems: "flex-end"
+  },
+  notificationsCointainer: {
+    marginLeft: 25,
+    marginRight: 10,
+    alignSelf: 'center'
+  },
+  headerText: {
+    color: "grey",
   },
   assetsTitle: {
     color: "white",

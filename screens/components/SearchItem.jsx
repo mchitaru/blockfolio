@@ -3,7 +3,7 @@ import { useNavigation } from "@react-navigation/native";
 
 const SearchItem = ({item}) => {
   const navigation = useNavigation();
-
+    
   return ( 
     <Pressable 
       style={styles.coinContainer}
