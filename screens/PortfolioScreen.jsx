@@ -1,8 +1,9 @@
-import { StyleSheet, Text, View } from "react-native";
+import { View, Text, FlatList, StyleSheet, Pressable, RefreshControl } from "react-native";
 import { useEffect, useState } from 'react';
 import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from "@react-navigation/native";
 
-import PortfolioList from "./components/PortfolioList";
+import PortfolioItem from "./components/PortfolioItem";
 import { usePortfolio } from "../contexts/PortfolioContext";
 import { getMarketData } from '../lib/api';
 import { computePortfolio } from "../lib/utils";
@@ -10,6 +11,7 @@ import { computePortfolio } from "../lib/utils";
 const PAGE_SIZE = 50;
 
 const PortfolioScreen = () => {
+  const navigation = useNavigation();
   const { portfolio } = usePortfolio();
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
@@ -29,15 +31,14 @@ const PortfolioScreen = () => {
       setData((prevData) => (page === 1 ? fulldata.assets : prevData.concat(fulldata.assets)));
       setLoading(false);    
     }
-
   }
 
   useEffect(() => {
     fetchMarketData(1);
   }, [portfolio]);
 
-  return (
-    <View>
+  const handleHeader = () => {
+    return (
       <View style={styles.balanceContainer}>
         <View>
           <Text style={styles.balance}>Portfolio 1</Text>
@@ -60,9 +61,35 @@ const PortfolioScreen = () => {
           />          
         </View>
       </View>
-      <PortfolioList 
+    )
+  }
+
+  const handleFooter = () => {
+    return (
+      <Pressable 
+        style={styles.buttonContainer}
+        onPress={() => (navigation.navigate("SelectMarket"))}
+      >
+        <Text style={styles.buttonText}>Add transaction</Text>
+      </Pressable>
+    )
+  }
+
+  return (
+    <View>
+      <FlatList 
         data={data}
-        loading={loading}
+        refreshing={loading} 
+        renderItem={({item}) => <PortfolioItem item={item}/>}
+        ListHeaderComponent={handleHeader}
+        ListFooterComponent={handleFooter}
+        refreshControl={
+          <RefreshControl
+            refreshing={loading} 
+            tintColor="white"
+            onRefresh={() => {}}
+          />
+        }  
       />
     </View>
   )
@@ -115,7 +142,27 @@ const styles = StyleSheet.create({
     alignSelf: "flex-end",
     marginRight: 5,
     paddingVertical: 15
-  }
+  },
+  assetsTitle: {
+    color: "white",
+    fontSize: 23,
+    fontWeight: "700",
+    paddingVertical: 20,
+    paddingHorizontal: 10
+  },
+  buttonContainer: {
+    backgroundColor: "#00005F",
+    padding: 10,
+    alignItems: "center",
+    marginVertical: 25,
+    marginHorizontal: 10,
+    borderRadius: 5
+  },
+  buttonText: {
+    color: "white",
+    fontSize: 17,
+    fontWeight: "600"
+  },
 });
  
 export default PortfolioScreen;
