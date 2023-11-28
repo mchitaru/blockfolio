@@ -75,6 +75,7 @@ const CoinScreen = () => {
                 name={data.market_data.price_change_percentage_24h < 0 ? "caretdown": "caretup"}
                 size={14} 
                 color="white"
+                style={styles.caretIcon}
               />
               <Text style={styles.priceChange}>
                 {data.market_data.price_change_percentage_24h.toFixed(2)}
@@ -115,6 +116,10 @@ const styles = StyleSheet.create({
     color: "white", 
     fontSize: 17,
     fontWeight: "500"
+  },
+  caretIcon: {
+    alignSelf: "center", 
+    marginRight: 5
   }
 });
  

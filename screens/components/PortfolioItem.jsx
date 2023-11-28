@@ -13,7 +13,7 @@ const PortfolioItem = ({item}) => {
       />
       <Text style={styles.title}>{item.symbol.toUpperCase()}</Text>
       <View style={styles.priceContainer}>
-        <Text style={styles.title}>
+        <Text style={styles.number}>
         {item.current_price.toLocaleString("en-US", {currency: "USD", style: "currency", minimumFractionDigits: 2, useGrouping: true})}
         </Text>
         <View style={styles.priceChangeContainer}>
@@ -27,7 +27,7 @@ const PortfolioItem = ({item}) => {
         </View>
       </View>
       <View style={styles.holdingsCointainer}>
-        <Text style={styles.title}>
+        <Text style={styles.number}>
           {item.value.toLocaleString("en-US", {currency: "USD", style: "currency", minimumFractionDigits: 2, useGrouping: true})}
         </Text>
         <Text style={styles.symbol}>
@@ -35,7 +35,7 @@ const PortfolioItem = ({item}) => {
         </Text>
       </View>
       <View style={styles.notificationsCointainer}>
-        <FontAwesome name="bell" size={24} color="white" />
+        <FontAwesome name="bell-o" size={20} color="white" />
       </View>
     </View>
    );
@@ -49,19 +49,24 @@ const styles = StyleSheet.create({
   title: {
     color: "white",
     fontSize: 16,
-    fontWeight: "bold",
-    alignSelf: 'center'
+    alignSelf: 'center',
+    fontWeight: "bold"
+  },
+  number: {
+    color: "white",
+    fontSize: 16,
   },
   symbol: {
     color: "grey",
-    fontWeight: "600"
+    fontWeight: "500"
   },
   itemContainer: {
     display: "grid",
     flexDirection: "row",
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: '#282828',
-    padding: 15,
+    paddingVertical: 25,
+    paddingHorizontal: 10
   },
   assetContainer: {
     width: 70,
@@ -72,7 +77,7 @@ const styles = StyleSheet.create({
     alignItems: "flex-end",
   },
   priceChangeContainer: {
-    flexDirection: "row"
+    flexDirection: "row",
   },
   priceChangePercentage: {
     color: "#16c784",
@@ -87,7 +92,8 @@ const styles = StyleSheet.create({
     alignItems: "flex-end"
   },
   notificationsCointainer: {
-    marginLeft: "auto",
+    marginLeft: 20,
+    marginRight: 5,
     alignSelf: 'center'
   }
 });

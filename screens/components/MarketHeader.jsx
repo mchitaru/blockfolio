@@ -37,7 +37,7 @@ const MarketHeader = ({id, image, symbol, rank}) => {
       </View>
       <FontAwesome 
         name={isWatchlisted() ? "star" : "star-o"} 
-        size={24} 
+        size={20} 
         color="white"
         onPress={handleClick}
       />

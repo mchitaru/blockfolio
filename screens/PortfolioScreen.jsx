@@ -40,18 +40,24 @@ const PortfolioScreen = () => {
     <View>
       <View style={styles.balanceContainer}>
         <View>
-          <Text style={styles.balance}>Current balance</Text>
+          <Text style={styles.balance}>Portfolio 1</Text>
           <Text style={styles.balanceValue}>$20000</Text>
-          <Text style={styles.valueChange}>$1000 (All Time)</Text>
         </View>
-        <View style={styles.percentageChangeContainer}>
+        <View>
+          <View style={styles.percentageChangeContainer}>
+            <AntDesign 
+              name={"caretup"}
+              size={14} 
+              color="#16c784"
+              style={styles.caretIcon}
+            />
+            <Text style={styles.percentageChange}>1.2%</Text>
+          </View>
           <AntDesign 
-            name={"caretup"}
-            size={14} 
-            color="white"
-            style={styles.caretIcon}
-          />
-          <Text style={styles.percentageChange}>1.2%</Text>
+            name="areachart" 
+            size={24} color="white" 
+            style={styles.chartIcon}
+          />          
         </View>
       </View>
       <PortfolioList 
@@ -79,9 +85,9 @@ const styles = StyleSheet.create({
     fontSize: 16
   },
   percentageChange: {
-    color: "white",
+    color: "#16c784",
     fontWeight: "500",
-    fontSize: 17
+    fontSize: 18
   },
   balanceContainer: {
     flexDirection: "row",
@@ -91,21 +97,25 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     marginHorizontal: 10,
     padding: 15,
-    // backgroundColor: "#00008F",
-    // borderRadius: 15
+    backgroundColor: "#00005F",
+    borderRadius: 15
   },
   percentageChangeContainer: {
     flexDirection: "row",
-    backgroundColor: "#16c784",
-    paddingHorizontal: 3,
-    paddingVertical: 8,
-    borderRadius: 5
+    // backgroundColor: "#16c784",
+    paddingHorizontal: 5,
+    // paddingVertical: 20,
+    borderRadius: 5,
   },
   caretIcon: {
     alignSelf: 'center',
     marginRight: 5,
+  },
+  chartIcon: {
+    alignSelf: "flex-end",
+    marginRight: 5,
+    paddingVertical: 15
   }
-
 });
  
 export default PortfolioScreen;
