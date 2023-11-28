@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: '#282828',
-    paddingVertical: 25,
+    paddingVertical: 20,
     paddingHorizontal: 10,
   },
   assetContainer: {

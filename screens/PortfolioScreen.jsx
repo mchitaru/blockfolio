@@ -18,6 +18,7 @@ const PortfolioScreen = () => {
   const [data, setData] = useState([]);
   const [value, setValue] = useState(0);
   const [percentageChange, setPercentageChange] = useState(0);
+  const [chartVisible, setChartVisible] = useState(false);
 
   const changeColor = (percentageChange < 0 ? "#ea3943" : "#16c784") || "white";
 
@@ -82,7 +83,7 @@ const PortfolioScreen = () => {
             <Text style={styles.headerText}>Allocation</Text>
           </View>
           <View style={styles.notificationsCointainer}>
-            <FontAwesome name="bell" size={10} color="white" />
+            <FontAwesome name="bell" size={10} color="grey" />
           </View>
         </View>
       </View>
