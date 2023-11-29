@@ -3,15 +3,25 @@ import MarketHeader from "./components/MarketHeader";
 import { AntDesign } from '@expo/vector-icons';
 import { LineChart, CandlestickChart } from "react-native-wagmi-charts";
 import { useRoute } from "@react-navigation/native";
+import { useCallback, useEffect, useState } from "react";
 
 import { getCoinData, getCoinChart } from "../lib/api";
-import { useEffect, useState } from "react";
+import ChartFilter from "./components/ChartFilter";
+
+const chartFilterDays = [
+  { days: "1", text: "24h" },
+  { days: "7", text: "7d" },
+  { days: "30", text: "30d" },
+  { days: "365", text: "1y" },
+  { days: "max", text: "All" },
+];
 
 const CoinScreen = () => {
 
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
   const [chart, setChart] = useState([]);
+  const [selectedRange, setSelectedRange] = useState("1");
 
   const route = useRoute();
   const id = route.params.id;
@@ -21,7 +31,7 @@ const CoinScreen = () => {
   const formatPrice = ({ value }) => {
     "worklet";
 
-    const price = Number(value != "" ? value : data.market_data.current_price.usd);
+    const price = Number(value != "" ? value : (data?.market_data.current_price.usd || 0));
     return price.toLocaleString("en-US", {currency: "USD", style: "currency", minimumFractionDigits: 2, useGrouping: true});
   };
 
@@ -32,22 +42,35 @@ const CoinScreen = () => {
     const data = await getCoinData(id);
     setData(data);
 
-    const chart = await getCoinChart(id);
-    setChart(chart);
-
     setLoading(false);
+  }
+
+  const fetchChartData = async (range) => {    
+
+    const chart = await getCoinChart(id, range);
+    setChart(chart);
   }
 
   useEffect(() => {
     fetchCoinData();
+    fetchChartData(1);
   }, []);
 
-  if(loading || data.length === 0 || chart.length === 0) {
+  const onSelectedRangeChange = (range) => {
+    setSelectedRange(range);
+    fetchChartData(range);
+  };
+
+  const memoOnSelectedRangeChange = useCallback((range) => 
+    onSelectedRangeChange(range), 
+  []);
+
+  if(loading || !data || chart.length === 0) {
     return <ActivityIndicator size="large" />
   }
 
-  const priceColor = data.market_data.price_change_percentage_24h < 0 ? "#ea3943" : "#16c784";
-  const chartColor = data.market_data.current_price.usd > chart.prices[0][1] ? "#16c784" : "#ea3943";
+  const priceColor = data.market_data.price_change_percentage_24h < 0 ? "#ea3943" : "#16c784" || "white";
+  const chartColor = data.market_data.current_price.usd > chart.prices[0][1] ? "#16c784" : "#ea3943" || "white";
 
   return ( 
       <LineChart.Provider
@@ -78,9 +101,20 @@ const CoinScreen = () => {
                 style={styles.caretIcon}
               />
               <Text style={styles.priceChange}>
-                {data.market_data.price_change_percentage_24h.toFixed(2)}
+                {data.market_data.price_change_percentage_24h?.toFixed(2)}
               </Text>
             </View>
+          </View>
+          <View style={styles.filtersContainer}>
+            {chartFilterDays.map((item) => (
+              <ChartFilter
+                key={item.text}
+                days={item.days}
+                text={item.text}
+                selectedRange={selectedRange}
+                setSelectedRange={memoOnSelectedRangeChange}
+              />
+            ))}
           </View>
           <LineChart height={screenWidth / 2}>
             <LineChart.Path color={chartColor} />
@@ -120,7 +154,16 @@ const styles = StyleSheet.create({
   caretIcon: {
     alignSelf: "center", 
     marginRight: 5
-  }
+  },
+  filtersContainer: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    backgroundColor: "#2B2B2B",
+    paddingVertical: 5,
+    borderRadius: 5,
+    marginVertical: 10,
+    marginBottom: 20
+  },  
 });
  
 export default CoinScreen;
