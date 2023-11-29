@@ -103,6 +103,7 @@ const PortfolioScreen = () => {
 
   return (
     <View>
+      <Text style={styles.title}>Portfolio</Text>
       <FlatList 
         data={data}
         refreshing={loading} 
@@ -122,6 +123,13 @@ const PortfolioScreen = () => {
 }
 
 const styles = StyleSheet.create({
+  title: {
+    color: "white",
+    fontSize: 25,
+    fontWeight: "bold",
+    paddingHorizontal: 20,
+    paddingBottom: 5
+  },
   balance: {
     color: "white",
     fontWeight: "600",

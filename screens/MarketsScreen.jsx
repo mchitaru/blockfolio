@@ -1,4 +1,4 @@
-import { ActivityIndicator, FlatList, RefreshControl } from 'react-native';
+import { ActivityIndicator, FlatList, RefreshControl, StyleSheet, Text, View } from 'react-native';
 import CoinItem from '../components/CoinItem';
 import { useEffect, useState } from 'react';
 
@@ -37,24 +37,37 @@ const MarketsScreen = () => {
   }
 
   return ( 
-    <FlatList 
-      data={data}
-      renderItem={({item}) => (<CoinItem item={item}/>)}
-      keyExtractor={item => item.id} 
-      onEndReached={() => {
-        fetchMarketData(data.length / PAGE_SIZE + 1);
-      }}
-      refreshing={loading} 
-      ListFooterComponent={handleLoading}
-      refreshControl={
-        <RefreshControl
-          refreshing={loading} 
-          tintColor="white"
-          onRefresh={() => fetchMarketData(1)}
-        />
-      }
-    />
+    <View>
+      <Text style={styles.title}>Markets</Text>
+      <FlatList 
+        data={data}
+        renderItem={({item}) => (<CoinItem item={item}/>)}
+        keyExtractor={item => item.id} 
+        onEndReached={() => {
+          fetchMarketData(data.length / PAGE_SIZE + 1);
+        }}
+        refreshing={loading} 
+        ListFooterComponent={handleLoading}
+        refreshControl={
+          <RefreshControl
+            refreshing={loading} 
+            tintColor="white"
+            onRefresh={() => fetchMarketData(1)}
+          />
+        }
+      />
+    </View>
    );
 }
  
+const styles = StyleSheet.create({
+  title: {
+    color: "white",
+    fontSize: 25,
+    fontWeight: "bold",
+    paddingHorizontal: 20,
+    paddingBottom: 5
+  }
+});
+
 export default MarketsScreen;

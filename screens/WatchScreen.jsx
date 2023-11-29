@@ -1,4 +1,4 @@
-import { ActivityIndicator, FlatList, RefreshControl, Text, View } from 'react-native';
+import { ActivityIndicator, Dimensions, FlatList, RefreshControl, StyleSheet, Text, View } from 'react-native';
 import { useEffect, useState } from 'react';
 
 import CoinItem from '../components/CoinItem';
@@ -13,6 +13,8 @@ const WatchScreen = () => {
   const [data, setData] = useState([]);
 
   const {watchlist} = useWatchlist();
+  
+  const screenHeight = Dimensions.get("window").height;
   
   const fetchMarketData = async (page) => {    
 
@@ -35,8 +37,12 @@ const WatchScreen = () => {
   }, [watchlist]);
 
   const handleEmpty = () => {
-    return <Text style={{color: "white"}}> No data present!</Text>;
-  };
+    return (
+      <View style={StyleSheet.flatten([styles.emptyContainer, { height: screenHeight*0.7 } ])}>
+        <Text style={styles.emptyText}>Nothing here</Text>
+      </View>
+    )
+};
 
   const handleLoading = () => {
     return (
@@ -45,34 +51,50 @@ const WatchScreen = () => {
       );
   };
 
-  if(data.length === 0) {
-    return (
-      <View style={{alignItems: "center", flex: 1, justifyContent: "center"}}>
-        <Text style={{color: "white", fontSize: 20, fontWeight: "bold"}}>Nothing here</Text>
-      </View>
-    );
-  }
-  
   return ( 
-    <FlatList 
-      data={data}
-      renderItem={({item}) => (<CoinItem item={item}/>)}
-      keyExtractor={item => item.id} 
-      onEndReached={() => {
-        fetchMarketData(data.length / PAGE_SIZE + 1);
-      }}
-      refreshing={loading} 
-      ListFooterComponent={handleLoading}
-      ListEmptyComponent={handleEmpty}
-      refreshControl={
-        <RefreshControl
-          refreshing={loading} 
-          tintColor="white"
-          onRefresh={() => fetchMarketData(1)}
-        />
-      }
-    />
+    <View>
+      <Text style={styles.title}>Watchlist</Text>
+      <FlatList 
+        data={data}
+        renderItem={({item}) => (<CoinItem item={item}/>)}
+        keyExtractor={item => item.id} 
+        onEndReached={() => {
+          fetchMarketData(data.length / PAGE_SIZE + 1);
+        }}
+        refreshing={loading} 
+        contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }}
+        ListFooterComponent={handleLoading}
+        ListEmptyComponent={handleEmpty}
+        refreshControl={
+          <RefreshControl
+            refreshing={loading} 
+            tintColor="white"
+            onRefresh={() => fetchMarketData(1)}
+          />
+        }
+      />
+    </View>
    );
 }
  
+const styles = StyleSheet.create({
+  title: {
+    color: "white",
+    fontSize: 25,
+    fontWeight: "bold",
+    paddingHorizontal: 20,
+    paddingBottom: 5
+  },
+  emptyContainer: {
+    alignItems: "center", 
+    flex: 1, 
+    justifyContent: "center"
+  },
+  emptyText: {
+    color: "white", 
+    fontSize: 20, 
+    fontWeight: "bold"
+  },
+});
+
 export default WatchScreen;
