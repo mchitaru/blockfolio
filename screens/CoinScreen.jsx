@@ -20,7 +20,7 @@ const CoinScreen = () => {
 
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
-  const [chart, setChart] = useState([]);
+  const [chart, setChart] = useState(null);
   const [selectedRange, setSelectedRange] = useState("1");
 
   const route = useRoute();
@@ -47,6 +47,7 @@ const CoinScreen = () => {
 
   const fetchChartData = async (range) => {    
 
+    setChart(null);
     const chart = await getCoinChart(id, range);
     setChart(chart);
   }
@@ -65,16 +66,16 @@ const CoinScreen = () => {
     onSelectedRangeChange(range), 
   []);
 
-  if(loading || !data || chart.length === 0) {
+  if(loading || !data || !chart) {
     return <ActivityIndicator size="large" />
   }
 
   const priceColor = data.market_data.price_change_percentage_24h < 0 ? "#ea3943" : "#16c784" || "white";
-  const chartColor = data.market_data.current_price.usd > chart.prices[0][1] ? "#16c784" : "#ea3943" || "white";
+  const chartColor = data.market_data.current_price.usd > chart?.prices[0][1] ? "#16c784" : "#ea3943" || "white";
 
   return ( 
       <LineChart.Provider
-        data={chart.prices.map(([timestamp, value]) => ({ timestamp, value }))}
+        data={chart?.prices.map(([timestamp, value]) => ({ timestamp, value })) || {}}
       >
         <View style={{paddingHorizontal: 10}}>
           <MarketHeader
@@ -116,7 +117,7 @@ const CoinScreen = () => {
               />
             ))}
           </View>
-          <LineChart height={screenWidth / 2}>
+          <LineChart width={screenWidth}>
             <LineChart.Path color={chartColor} />
             <LineChart.CursorCrosshair color={chartColor} />
           </LineChart>
